@@ -37,6 +37,7 @@ Dentro de cada una se encontrara la resolucion en CUDA con C++ y OpenCV con Pyth
 **Descripcion**: Realizar utilizando CUDA con C++ el script para generar el histograma de cambio de brillo y otro de contraste
 
 **Archivos**: 
+* Carpeta "brillo_contraste": Imagen y script de Colab
 
 **Solucion**: 
 1. Ingresamos a Colab y abrimos el archivo(`Tarea1/brillo_contraste.ipynb`).
