@@ -155,7 +155,7 @@ Dentro de cada una se encontrara la resolucion en CUDA con C++ y OpenCV con Pyth
 
 15. Liberamos la memoria del gpu.
 
-## TAREA  
+## TAREA 5
 
 **Descripcion**: Realizar utilizando CUDA con C++ el script para generar un caso de template matching con una matriz de imagen principal, otra de template y que vaya generando submatrices con las mismas dimensiones y utilizando una formula de medida(en este caso se utilizo distancia euclidiana), considere el minimo valor e indique las coordenadas iniciales donde se encontro este punto.
 
@@ -166,21 +166,25 @@ Dentro de cada una se encontrara la resolucion en CUDA con C++ y OpenCV con Pyth
 
 **Solucion**: 
 
-1. Ingresamos a Colab y abrimos el archivo(`Tarea2/EcualizarImagen.ipynb`)
-2. Una vez abierto, ejecutamos en orden los comandos como aparece en la imagen:
+1. Ingresamos a VS 2022 y abrimos el proyecto(`Tarea5/templateMatching`)
+2. Una vez abierto, verificamos las rutas de las imagenes(tanto la imagen principal como el template y ejecutamos):
 <!-- ![Funciones iniciales](images/tarea2_1.PNG) -->
-3. Llegamos al cuarto cuadro y veremos el codigo el cual tiene definido un histograma de la imagen que se tomo como ejemplo, en este caso de la imagen en (`Tarea2/Imagenes/kodim08_grayscale.png`)
+![Ejecucion del proyecto para obtener matrices](templateMatching.png)
+3. Ahora abrimos el otro proyecto con CUDA TMatchingv1 y copiamos las matrices en el codigo (`Tarea55/TMatchingv1/`)
 4. Ejecutamos el codigo.
-5. Tendremos la salida por pantalla de los pasos que esta realizando
+5. Tendremos la salida por pantalla de la siguiente manera
 
-    * Primero mostrara un mensaje de inicio
-    * Segundo un array de las acumulaciones
-    * Tercero, un array indicando el inicio y fin del proceso
-    * Y por ultimo el array del histograma ecualizado, indicando las frecuencias por cada posicion.
-    * Podemos llevar este array a los proyectos de Visual Studio 2022 de la carpeta "Ecualizador" y verificar el resultado en imagen.
+    * Primero generara en 2 variables las 2 matrices, de la imagen y el template
+    * Segundo, llamara a la funcion DistanciaEuclidiana la cual operara por submatrices
+    * Tercero, por cada submatriz del mismo tama;o que el template ira sacando la distancia con esa matriz
+    * Y por ultimo devolvera un array con las distancias calculadas.
+    * Mostrara por pantalla la menor distancia y a que punto la obtuvo aproximadamente.
 
 **Screenshots de Test**:
 
+![Proyecto con CUDA ejecutandose y mostrando resultado](CUDATM.png)
+
+![Medida utilizando Distancia Euclidiana](distanciaEuclidiana.png)
 <!-- ![Ejecucion del programa](./images/tarea2_2.png)
 
 ![Imagen Equalizada resultado](./Tarea2/Imagenes/kodim08_grayscale_equalized.PNG) -->

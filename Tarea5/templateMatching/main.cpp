@@ -1,4 +1,4 @@
-/*#include <opencv2/opencv.hpp>
+#include <opencv2/opencv.hpp>
 #include <iostream>
 #include <cmath>
 
@@ -29,7 +29,7 @@ double calcularDistanciaEuclidiana(const cv::Mat& mat1, const cv::Mat& mat2) {
     showMatriz(mat1);
     showMatriz(mat2);
 
-    unsigned char* input1 = (unsigned char*)(mat1.data);
+    /*unsigned char* input1 = (unsigned char*)(mat1.data);
     unsigned char* input2 = (unsigned char*)(mat2.data);
     double sum = 0.0;
     int r, g, b, r_t, g_t, b_t;
@@ -53,7 +53,7 @@ double calcularDistanciaEuclidiana(const cv::Mat& mat1, const cv::Mat& mat2) {
             std::cout << "La suma hasta ahora es: " << sum << std::endl;
         }
     }
-    return std::sqrt(sum);
+    return std::sqrt(sum);*/
 }
 
 // Función para generar submatrices de la imagen principal
@@ -69,7 +69,8 @@ int* generarSubmatrices(const cv::Mat& img, const cv::Mat& templ) {
     showMatriz(img);
     showMatriz(templ);
 
-    for (int i = 0; i <= img.rows - templ.rows; ++i) {
+    std::cout << std::endl << "MATRICES LISTAS PARA COPIAR" << std::endl;
+    /*for (int i = 0; i <= img.rows - templ.rows; ++i) {
         for (int j = 0; j <= img.cols - templ.cols; ++j) {
             cv::Mat subImg = img(cv::Rect(j, i, templ.cols, templ.rows));
 
@@ -81,7 +82,7 @@ int* generarSubmatrices(const cv::Mat& img, const cv::Mat& templ) {
                 return new int[x_point, y_point];
             }
         }
-    }
+    }*/
     return new int[0, 0];
 }
 
@@ -99,10 +100,10 @@ int main() {
     int* resultado = generarSubmatrices(img, templ);
     std::cout << "Resultados de puntos encontrados: x -> " << resultado[0] << " y -> " << resultado[0] << std::endl;
     return 0;
-}*/
+}
 
 
-
+/*
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
@@ -145,3 +146,4 @@ int main() {
 
     return 0;
 }
+*/
