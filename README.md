@@ -14,13 +14,19 @@ El proyecto consta de la resolucion de las tareas en el siguiente orden:
 1. Cambiar el Brillo/Contraste de una imagen
 2. Ecualizar una imagen
 3. Sumar/Restar imagenes
+4. Convolucion
+5. Template Matching
+6. Integrales Proyectivas
 
 ## Descripcion
 
-El proyecto consta de 3 subcarpetas:
+El proyecto consta de 6 subcarpetas:
 * Tarea1
 * Tarea2
 * Tarea3
+* Tarea4
+* Tarea5
+* IntegralesProyectivas
 
 Dentro de cada una se encontrara la resolucion en CUDA con C++ y OpenCV con Python/C++ donde colocamos el codigo desarrollado y las imagenes utilizadas para su resolucion.
 
@@ -188,6 +194,43 @@ Dentro de cada una se encontrara la resolucion en CUDA con C++ y OpenCV con Pyth
 ![Proyecto con CUDA ejecutandose y mostrando resultado](CUDATM.png)
 
 ![Medida utilizando Distancia Euclidiana](distanciaEuclidiana.png)
-<!-- ![Ejecucion del programa](./images/tarea2_2.png)
 
-![Imagen Equalizada resultado](./Tarea2/Imagenes/kodim08_grayscale_equalized.PNG) -->
+
+## INTEGRALES PROYECTIVAS
+
+**Descripción**: Trabajo adicional realizado con Python para reconocimiento de rostros.
+
+**Archivos**: 
+* Imagenes: IMPORTANTE, las imágenes se colocan en una carpeta llamada "images/"
+* Imagen Prueba: IMPORTANTE, la imagen de prueba se usa para ver si esta imagen que contiene una cara humana, según las integrales proyectivas es una cara humana o no.
+* Script Integrales Proyectivas: Script del Colab(principal)
+
+**Solución**: 
+
+1. Ingresamos a Colab y abrimos el archivo(`Tarea_extra/integrales_proyectivas_master_ccs.ipynb`)
+2. Una vez abierto, ejecutamos en orden los comandos
+3. Declaramos una función que nos divida la imagen en cuadrilateros.
+
+4. Declaramos una función que procesará la nueva imagen.
+
+5. La siguiente celda contiene prácticamente el mismo código que la anterior, con las llamadas a las librerías que nos van a ser de ayuda.
+
+6. En esa celda se carga y redimensiona la imagen, para que todas las imagenes tengan al misma dimension.
+
+7. Dividimos la imagen en 8 rows/filas. Este caso es para el histograma vertical de la cara.
+
+8. Guardamos las listas de las rows en un csv.
+
+9. Dividimos la imagen en caudrilateros. 
+
+10. Elegimos las placas cuadrilateras que caen en las regiones de ojos y boca.
+
+11. Convertimos las placas en matrices y las convertimos en listas para simplificar el proceso de sacar la media de la región. 
+
+12. Guardamos las medias de las regiones de ojos y boca en dos CSV's diferentes.
+
+13. Visualizamos los gráficos.
+
+14. Con un bucle for procedemos a verificar si la nueva imagen es una cara humana o no, caso las medias caigan dentro de los rangos.
+
+15. Con un bucle for procedemos a verificar si la nueva imagen es una cara humana o no, caso las medias caigan dentro de un rango de media de los puntos del dataset original.
