@@ -170,8 +170,11 @@ Dentro de cada una se encontrara la resolucion en CUDA con C++ y OpenCV con Pyth
 2. Una vez abierto, verificamos las rutas de las imagenes(tanto la imagen principal como el template y ejecutamos):
 <!-- ![Funciones iniciales](images/tarea2_1.PNG) -->
 ![Ejecucion del proyecto para obtener matrices](templateMatching.png)
+
 3. Ahora abrimos el otro proyecto con CUDA TMatchingv1 y copiamos las matrices en el codigo (`Tarea55/TMatchingv1/`)
+
 4. Ejecutamos el codigo.
+
 5. Tendremos la salida por pantalla de la siguiente manera
 
     * Primero generara en 2 variables las 2 matrices, de la imagen y el template
